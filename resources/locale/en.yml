@@ -1,0 +1,10 @@
+quasimo-tag-sidebar:
+  forum:
+    edit_button: "Edit Sidebar"
+    modal_title: "Edit Tag: {tag}"
+    description_label: "Custom Description"
+    description_placeholder: "Enter a custom description for this tag..."
+    sidebar_label: "Sidebar Content (Markdown)"
+    sidebar_placeholder: "Enter sidebar content using Markdown...\n\n## Links\n- [Example](https://example.com)"
+    save_button: "Save"
+    sidebar_empty: "(No sidebar content yet)"
