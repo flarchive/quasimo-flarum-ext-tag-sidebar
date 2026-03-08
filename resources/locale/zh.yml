@@ -1,0 +1,10 @@
+quasimo-tag-sidebar:
+  forum:
+    edit_button: "编辑侧栏"
+    modal_title: "编辑标签：{tag}"
+    description_label: "自定义简介"
+    description_placeholder: "输入该标签的自定义简介..."
+    sidebar_label: "侧栏内容（Markdown）"
+    sidebar_placeholder: "使用 Markdown 输入侧栏内容...\n\n## 链接\n- [示例](https://example.com)"
+    save_button: "保存"
+    sidebar_empty: "（暂无侧栏内容）"
