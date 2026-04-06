@@ -1,0 +1,204 @@
+// Tag Sidebar Widget — base styles shared by all variants
+.TagSidebarWidget {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--control-bg);
+  border-radius: var(--border-radius);
+
+  &-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--body-color);
+    margin-bottom: 12px;
+
+    h1, h2, h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--heading-color);
+    }
+
+    p {
+      margin: 0 0 8px;
+      &:last-child { margin-bottom: 0; }
+    }
+
+    ul {
+      margin: 0 0 8px;
+      padding-left: 16px;
+      li { margin-bottom: 4px; }
+    }
+
+    a {
+      color: var(--link-color);
+      &:hover { text-decoration: underline; }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 4px 0;
+    }
+  }
+
+  &-empty {
+    color: var(--muted-color);
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  &-editBtn {
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    background: var(--body-bg) !important;
+    border: 1px solid var(--control-bg-dark) !important;
+
+    &:hover {
+      background: var(--control-bg-dark) !important;
+    }
+  }
+}
+
+// ─── Left mode ───────────────────────────────────────────────────────────────
+// Desktop: widget is inside the nav — no extra work needed.
+// Mobile:  widget is inserted after .IndexPage-results (.TagSidebarWidget--mobile).
+
+// Hide the desktop (nav) widget on mobile — the nav itself is collapsed, but
+// add explicit hide to prevent double rendering if the nav is somehow visible.
+@media (max-width: 767px) {
+  .TagSidebarWidget--desktop {
+    display: none;
+  }
+}
+
+// Hide the mobile (after-results) widget on desktop.
+@media (min-width: 768px) {
+  .TagSidebarWidget--mobile {
+    display: none;
+  }
+}
+
+// ─── Right mode ──────────────────────────────────────────────────────────────
+// The widget (.TagSidebarWidget--right) is inserted as a sibling after
+// .IndexPage-results.  On desktop we turn the parent into a flex row so the
+// sidebar floats to the right.  On mobile the flex is disabled and the widget
+// falls below the results naturally.
+
+@media (min-width: 768px) {
+  .TagSidebarLayout--right {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    // Ensure the nav (if present as a sibling) keeps its width
+    > nav, > .IndexPage-nav, > .sideNav {
+      flex-shrink: 0;
+    }
+
+    > .IndexPage-results {
+      flex: 1;
+      min-width: 0;
+    }
+
+    > .TagSidebarWidget--right {
+      width: 200px;
+      flex-shrink: 0;
+      margin-top: 0;
+      margin-left: 16px;
+      // Stick to the top while scrolling through a long post list
+      position: sticky;
+      top: 60px;
+      align-self: flex-start;
+    }
+  }
+}
+
+// ─── Pure DOM edit dialog ─────────────────────────────────────────────────────
+.TagSidebarDialog {
+  &-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  & {
+    background: var(--body-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--control-bg-dark);
+  }
+
+  &-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  &-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--muted-color);
+    cursor: pointer;
+    padding: 0 4px;
+    &:hover { color: var(--body-color); }
+  }
+
+  &-body {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--body-color);
+  }
+
+  &-textarea {
+    resize: vertical;
+    font-family: monospace;
+    font-size: 13px;
+    min-height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--control-bg-dark);
+  }
+}
+
+body.TagSidebarDialog-open {
+  overflow: hidden;
+}
