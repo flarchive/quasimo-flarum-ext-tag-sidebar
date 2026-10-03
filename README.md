@@ -2,13 +2,24 @@
 
 > **Read-only archive of released versions of quasimo/flarum-ext-tag-sidebar.** Not for installation: use [Packagist](https://packagist.org/packages/quasimo/flarum-ext-tag-sidebar) or the [upstream repository](https://github.com/Quasimo/flarum-ext-tag-sidebar).
 
-**0** versions archived · Latest: [`v2.0.21`](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v2.0.21) · License: `MIT` · Flarum: `^1.8 || ^2.0`
+**36** versions archived · Latest: [`v2.0.21`](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v2.0.21) · License: `MIT` · Flarum: `^1.8 || ^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `v1.0.0` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.0) |
+| `v1.0.1` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.1) |
+| `v1.0.10` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.10) |
+| `v1.0.11` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.11) |
+| `v1.0.12` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.12) |
+| `v1.0.13` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.13) |
+| `v1.0.2` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.2) |
+| `v1.0.3` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.3) |
+| `v1.0.4` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.4) |
+| `v1.0.5` | 2026-03-08 | `^1.8` | [Browse](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tree/archive/v1.0.5) |
+
+[View all 36 versions](https://github.com/flarchive/quasimo-flarum-ext-tag-sidebar/tags)
 
 Catalog entry: [packages/quasimo-flarum-ext-tag-sidebar.json](https://github.com/flarchive/archive-index/blob/main/packages/quasimo-flarum-ext-tag-sidebar.json)
 
